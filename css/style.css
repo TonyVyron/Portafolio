@@ -9,8 +9,11 @@
 
 body {
     color: white;
-    background: var(--background);
-    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient( var(--background),  #192330cb), url(../img/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 h1,
@@ -185,7 +188,7 @@ a:focus {
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #ffffff !important;
+        background: var(--background) !important;
     }
     
     .navbar .navbar-brand {
@@ -193,7 +196,7 @@ a:focus {
     }
     
     .navbar.nav-sticky .navbar-brand {
-        color: var(--blue);
+        color: white;
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -206,7 +209,7 @@ a:focus {
     
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-        color: black;
+         color: #ffffff;
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
@@ -224,39 +227,61 @@ a:focus {
     .navbar {
         width: 100%;
         padding: 15px 20px;
-        background: #ffffff !important;
+        background: transparent; /* Barra transparente cuando está en la parte superior */
+        transition: background-color 0.5s;
+    }
+    
+    .navbar.nav-sticky {
+        background: var(--background) !important; /* Cambia al color de fondo al hacer scroll */
     }
     
     .navbar .navbar-brand {
-        color: var(--blue);
-        font-size: 24px; /* Reduce the font size */
+        font-size: 24px; /* Reduce el tamaño de la fuente */
+        color: #ffffff; /* Texto blanco por defecto */
     }
     
     .navbar .navbar-nav {
         margin-top: 15px;
     }
     
-    .navbar a.nav-link {
+    .navbar .nav-link {
         padding: 5px;
+        color: #ffffff !important; /* Texto blanco por defecto */
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+        color: var(--blue) !important; /* Hover y seleccionado en azul */
+    }
+    
+    .navbar.nav-sticky .nav-link {
+        color: #ffffff !important; /* Mantiene el texto blanco cuando la barra es fija */
     }
     
     .navbar .dropdown-menu {
         box-shadow: none;
     }
+    
+    .navbar .navbar-toggler {
+        border-color: transparent; /* Sin borde para el ícono */
+    }
+    
+    .navbar .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28256, 256, 256, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Ícono del menú en blanco */
+    }
 }
 
 @media (max-width: 575.98px) {
     .navbar .navbar-brand {
-        font-size: 18px; /* Further reduce the font size */
+        font-size: 18px; /* Reduce más el tamaño de la fuente */
     }
 }
 
 @media (max-width: 375px) {
     .navbar .navbar-brand {
-        display: none; /* Hide the brand text on very small screens */
+        display: none; /* Oculta el texto de la marca en pantallas muy pequeñas */
     }
 }
-
 
 /*******************************/
 /********** Hero CSS ***********/
@@ -271,7 +296,7 @@ a:focus {
     width: 100%;
     height: 100vh; /* Ajusta la altura al 100% de la ventana */
     overflow: hidden;
-    background: linear-gradient(#1a45d1, rgba(13, 43, 71, 0.877)), url(../img/hero-bg.jpg);
+    background: linear-gradient(#1a45d1ce, rgba(13, 43, 71, 0.774)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -438,8 +463,9 @@ a:focus {
 
 .hero-image img {
     background-color:var(--background);
-    width: 100%;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%; /* Esto hace que la imagen sea circular */
     object-fit: cover;
 }
 
@@ -680,7 +706,7 @@ a:focus {
 
 .experience .timeline .timeline-text {
     padding: 30px;
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.95)), url(../img/hero-bg.jpg);
+    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.918)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -764,7 +790,7 @@ a:focus {
 /********* Service CSS *********/
 /*******************************/
 .service {
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.95)), url(../img/hero-bg.jpg);
+    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.781)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -788,8 +814,8 @@ a:focus {
 
 .service .service-icon {
     position: relative;
-    width: 150px;
-    min-height: 150px;
+    width: 180px;
+    min-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -832,6 +858,7 @@ a:focus {
     color: #ffffff;
 }
 
+
 @media (max-width: 575.98px) {
     .service .service-text h3 {
         font-size: 16px;
@@ -843,12 +870,41 @@ a:focus {
     }
 }
 
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.skills-list li {
+    background: #fff;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+}
+
+.skills-list li:hover {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
 .portfolio {
     color: var(--background);
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.95)), url(../img/hero-bg.jpg);
+    background: linear-gradient(#1f3fa8a2, rgba(23, 111, 194, 0.548)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1508,7 +1564,7 @@ a:focus {
 /********* Footer CSS **********/
 /*******************************/
 .footer {
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.95)), url(../img/hero-bg.jpg);
+    background: linear-gradient(#1f3fa8b7, rgba(23, 111, 194, 0.637)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
