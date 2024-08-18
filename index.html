@@ -39,7 +39,7 @@
                         <a href="#about" class="nav-item nav-link">Acerca</a>
                         <a href="#service" class="nav-item nav-link">Servicio</a>
                         <a href="#experience" class="nav-item nav-link">Experiencia</a>
-                        <a href="#portfolio" class="nav-item nav-link">Portafolio</a>
+                        <a href="#portfolio" class="nav-item nav-link">Proyectos</a>
                         <a href="#contact" class="nav-item nav-link">Contactame</a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                                 <h1>Antonio Fuentes Jara</h1>
                                 Desarrollador <span class="typed-text">Web, Front End, Back End, Móvil, Móvil Multiplataforma</span>
                                 <h2></h2>
-                                <h5>Con conocimientos en Ruby on Rails, JavaScript, TypeScript, Kotlin, Dart, SQL, Firebase</h5>
+                                <h5>Con experiencia en Ruby on Rails, JavaScript, TypeScript, Kotlin, Dart, SQL, y Firebase</h5>
                             </div>
                             <div class="hero-btn">
                                 <a class="btn" href="img/CV- Antonio.pdf" download="CV-Antonio.pdf">Descargar CV</a>
@@ -133,10 +133,10 @@
         <!-- Service Start -->
         <div class="service" id="service">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>Lo que hago</p>
-                    <h2>Mis Habilidades</h2>
-                </div>
+                    <h2>Mis Habilidades </h2>
+                </header>
                 <div class="row">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="service-item">
@@ -202,6 +202,8 @@
                                     <li>GitLab</li>
                                     <li> Postman</li>
                                     <li> Scrum</li>
+                                    <li> VSC</li>
+                                    <li> Android Studio</li>
                                     <li> Azure DevOps</li>
                                     <li> Jira</li>
                                 </ul>
@@ -285,89 +287,204 @@
         <div class="portfolio" id="portfolio">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Mis Proyectos</p>
-                    <h2>Mi Portafolio</h2>
+                    <p>Portafolio</p>
+                    <h2>Mis Proyectos</h2>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <ul id="portfolio-filter">
                             <li data-filter="*" class="filter-active">Todos</li>
                             <li data-filter=".filter-1">Diseño Web</li>
-                            <li data-filter=".filter-2">Aplicaciones Móviles</li>
+                            <li data-filter=".filter-2">Aplicaciones Móviles Nativas</li>
                             <li data-filter=".filter-3">Aplicaciones Multiplataforma</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-1.jpg" alt="Image">
+                                <a  href="img/portfolio-1.jpg" data-lightbox="portfolio"><img src="img/portfolio-1.jpg" alt="Setab App"></a>
                             </div>
-                            <div class="portfolio-text">
+                            <div class="portfolio-text" >
                                 <h3>Setab App</h3>
-                                <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
+                                <p>Desarrollé una aplicación multiplataforma utilizando Flutter y Dart que permite a los estudiantes almacenar y gestionar documentos académicos. Implementé integración con Firebase para el almacenamiento y sincronización en tiempo real, mejorando la accesibilidad y gestión de las calificaciones.</p>
+                                <ul class="skills-list">
+                                    <li>Flutter</li>
+                                    <li>VSC</li>
+                                    <li>Dart</li>
+                                    <li>Figma</li>
+                                    <li>Firebase</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-2.jpg" alt="Image">
+                                <a  href="img/portfolio-2.jpg" data-lightbox="portfolio"><img src="img/portfolio-2.jpg" alt="Setab App"></a>
                             </div>
                             <div class="portfolio-text">
                                 <h3>List Buy</h3>
-                                <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
+                                <p>Creé una aplicación móvil nativa en Kotlin utilizando Android Studio, enfocada en la gestión de compras y listas de productos. Integré Firebase para el backend y SQLite para almacenamiento local, facilitando una experiencia fluida y rápida para los usuarios.</p>
+                                <ul class="skills-list">
+                                    <li>Android Studio</li>
+                                    <li>Kotlin</li>
+                                    <li>Firebase</li>
+                                    <li>SQLite</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-3.jpg" alt="Image">
+                                <a  href="img/portfolio-3.jpg" data-lightbox="portfolio"><img src="img/portfolio-3.jpg" alt="Setab App"></a>
                             </div>
                             <div class="portfolio-text">
                                 <h3>Tablero de Proyectos</h3>
-                                <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
+                                <p>Desarrollé una aplicación web para la gestión de proyectos utilizando Vue 3.0 y Ruby on Rails. El tablero permite a los usuarios gestionar tareas y proyectos con una interfaz intuitiva, empleando HTML5 y CSS para un diseño responsive y atractivo.</p>
+                                <ul class="skills-list">
+                                    <li>Vue 3.0</li>
+                                    <li>Figma</li>
+                                    <li>HTML5</li>
+                                    <li>VSC</li>
+                                    <li>CSS</li>
+                                    <li>Ruby on Rails</li>
+                                    <li>Postman</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-4.jpg" alt="Image">
+                                <a  href="img/portfolio-4.jpg" data-lightbox="portfolio"><img src="img/portfolio-4.jpg" alt="Setab App"></a>
                             </div>
                             <div class="portfolio-text">
                                 <h3>Car Finder</h3>
-                                <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
+                                <p>Desarrollé una aplicación multiplataforma en Flutter para localizar y gestionar información sobre vehículos. La aplicación integra Firebase Storage y Firestore para almacenamiento y consulta de datos en tiempo real.</p>
+                                <ul class="skills-list">
+                                    <li>Flutter</li>
+                                    <li>Figma</li>
+                                    <li>VSC</li>
+                                    <li>Dart</li>
+                                    <li>SQLite</li>
+                                    <li>Firebase Storage y Firestore</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-5.jpg" alt="Image">
+                                <a  href="img/portfolio-5.jpg" data-lightbox="portfolio"><img src="img/portfolio-5.jpg" alt="Setab App"></a>
                             </div>
                             <div class="portfolio-text">
                                 <h3>Zapateria Fuentes</h3>
-                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
+                                <p>Desarrollé un sitio web para una tienda de zapatos utilizando PHP y MySQL. La aplicación permite gestionar inventarios y ventas con una interfaz de usuario basada en HTML5 y CSS para una experiencia de compra eficiente.</p>
+                                <ul class="skills-list">
+                                    <li>PHP</li>
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="1s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
-                                <img src="img/portfolio-6.jpg" alt="Image">
+                                <a  href="img/portfolio-6.jpg" data-lightbox="portfolio"><img src="img/portfolio-6.jpg" alt="Setab App"></a>
                             </div>
                             <div class="portfolio-text">
                                 <h3>Gestor Vyron</h3>
-                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
+                                <p>Creé una plataforma de gestión de Bases de datos usando PHP y MySQL, con un enfoque en la administración eficiente de consultas y relaciones. Utilicé HTML5 y CSS para una interfaz clara y funcional, optimizando el flujo de trabajo.</p>
+                                <ul class="skills-list">
+                                    <li>PHP</li>
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <br>
+                                <div class="portfolio-buttons">
+                                    <a class="btn-plus" href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                                        <i class="fas fa-image"></i>
+                                    </a>
+                                    <a class="button demo-button" href="enlace-al-demo">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a class="button github-button" href="enlace-a-github">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <!-- Portfolio End -->
         
         <!-- Contact Start -->
