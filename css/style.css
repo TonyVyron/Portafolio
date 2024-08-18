@@ -5,6 +5,7 @@
 :root {
     --background: #222831;
     --blue: #1f5ea8;
+    --orange: #b7fa00 ;
   }
 
 body {
@@ -214,7 +215,7 @@ a:focus {
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: black;
+        color: var(--orange);
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -286,6 +287,9 @@ a:focus {
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
+.hero-text {
+    font-size: 27px;
+}
 .hero {
     display: flex;
     margin-bottom: 45px;
@@ -345,8 +349,8 @@ a:focus {
     display: inline-block;
     margin: 0;
     height: 3px;
-    color: #ffffff;
-    font-size: 30px;
+    color: var(--orange);
+    font-size: 27px;
     font-weight: 600;
 }
 
@@ -438,6 +442,18 @@ a:focus {
         padding: 10px 15px;
         letter-spacing: 1px;
     }
+    .hero .hero-image {
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero .hero-image img {
+        width: 100%;
+        max-width: 200px;
+        height: 200px; 
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -463,8 +479,8 @@ a:focus {
 
 .hero-image img {
     background-color:var(--background);
-    width: 50vh;
-    height: 50vh;
+    width: 500px;
+    height: 480px;
     border-radius: 50%; /* Esto hace que la imagen sea circular */
     object-fit: cover;
 }
