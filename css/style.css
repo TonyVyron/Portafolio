@@ -963,9 +963,7 @@ a:focus {
 
 .portfolio-item {
     display: flex;
-    flex-direction: row;
     margin-bottom: 20px;
-    position: relative;
     min-height: 250px;
 }
 
@@ -977,30 +975,24 @@ a:focus {
     overflow: hidden;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Asegura que el contenedor se expanda para ocupar toda la altura disponible */
 }
 
 .portfolio-img {
-    flex: 1;
-    position: relative;
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
     overflow: hidden;
+    position: relative;
 }
 
 .portfolio-img img {
     cursor: pointer;
-    width: 100%;
     height: 100%;
+    width: 100%;
     transition: transform 0.4s ease, opacity 0.4s ease; 
-    object-fit: cover; /* Ajusta la imagen para mantener la proporción */
+    object-fit: cover; 
 }
 
-.portfolio-item:hover .portfolio-img img {
-    -webkit-transform:scale(1.15);
-    -moz-transform:scale(1.15);
-    -ms-transform:scale(1.15);
-    -o-transform:scale(1.15);
-    transform:scale(1.15);
-}
 
 .portfolio-text {
     flex: 2;
@@ -1052,7 +1044,13 @@ a:focus {
     color: #007bff;
 }
 
-
+.portfolio-item:hover .portfolio-img img {
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
+}
 
 /*******************************/
 /********* Banner CSS **********/
