@@ -17,6 +17,35 @@ body {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Alinea los botones al final del contenedor */
+}
+
+.github-button {
+    display: flex;
+    font-size: 25px;
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-button i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.github-button:hover i {
+    transform: scale(1.3);
+    color: white;
+}
+
+
 h1,
 h2, 
 h3, 
@@ -627,6 +656,10 @@ a:focus {
 /******* Experience CSS ********/
 /*******************************/
 .experience {
+    background: linear-gradient( var(--background),  #192330cb), url(../img/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     padding: 45px 0 15px 0;
 }
@@ -806,112 +839,72 @@ a:focus {
 /********* Service CSS *********/
 /*******************************/
 .service {
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.781)), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
     position: relative;
     width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 45px 0;
 }
 
 .service .service-item {
-    position: relative;
-    margin-bottom: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
-}
-
-.service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 var(--background);
 }
 
 .service .service-icon {
-    position: relative;
-    width: 180px;
-    min-height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--blue);
-    background: #ffffff;
-}
-
-.service .service-icon i {
-    position: relative;
-    font-size: 60px;
-    color: var(--blue);
+    font-size: 100px;
+    color: white;
     transition: .3s;
-}
-
-.service .service-item:hover i {
-    font-size: 75px;
-}
-
-.service .service-text {
-    position: relative;
-    width: calc(100% - 118px);
-    padding: 0 30px;
-}
-
-.service .service-text h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: 1s;
-}
-
-.service .service-text p {
-    margin: 0;
-    font-size: 16px;
-    transition: 1s;
-}
-
-.service .service-item:hover .service-text h3,
-.service .service-item:hover .service-text p {
-    color: #ffffff;
-}
-
-
-@media (max-width: 575.98px) {
-    .service .service-text h3 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    
-    .service .service-text p {
-        font-size: 14px;
-    }
 }
 
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
+    gap: 15px;
     list-style-type: none;
+    padding: 0;
 }
 
 .skills-list li {
-    background: #fff;
-    border: 1px solid var(--blue);
-    border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--blue);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
 }
 
-.skills-list li:hover {
-    background-color: var(--blue);
-    color: #fff;
+
+.skills-list i {
+    transition: 0.5s ease;
 }
+
+.skills-list li img {
+    width: 70px;
+    height: 70px;
+    transition: 0.5s ease;
+}
+
+@media (min-width: 768px) {
+    .service .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .service .col-lg-4 {
+        flex: 1;
+        max-width: 31%; 
+        text-align: center;
+    }
+}
+
+.service i:hover{
+    transform: scale(1.1);
+}
+
+.skills-list li img:hover {
+    transform: scale(1.1);
+}
+
 
 /*******************************/
 /******** Portfolio CSS ********/
@@ -1010,38 +1003,6 @@ a:focus {
 .portfolio-text p {
     font-size: 1em;
     margin: 0 0 20px;
-}
-
-.portfolio-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: auto; /* Alinea los botones al final del contenedor */
-}
-
-.btn-plus,
-.demo-button {
-    background-color: #007bff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-}
-
-.github-button {
-    background-color: #333;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.github-button:hover {
-    color: #007bff;
 }
 
 .portfolio-item:hover .portfolio-img img {
