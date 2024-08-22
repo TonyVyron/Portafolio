@@ -2,18 +2,20 @@
 /********* General CSS *********/
 /*******************************/
 
+ .container {
+    max-width: 70vw;
+}
+
 :root {
-    --background: #222831;
+    --background: #19202c;
     --blue: #1f5ea8;
-    --orange: #b7fa00 ;
+    --green: #b7fa00 ;
+    --primary-color: white;
   }
 
 body {
-    color: white;
-    background: linear-gradient( var(--background),  #192330cb), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    color: var(--primary-color);
+    background: var(--background);
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -42,7 +44,7 @@ body {
 
 .github-button:hover i {
     transform: scale(1.3);
-    color: white;
+    color: var(--primary-color);
 }
 
 
@@ -52,11 +54,11 @@ h3,
 h4,
 h5, 
 h6 {
-    color: white;
+    color: var(--primary-color);
 }
 
 a {
-    color: white;
+    color: var(--primary-color);
     transition: .3s;
 }
 
@@ -182,7 +184,7 @@ a:focus {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px rgba(158, 158, 158, 0.3);
 }
 
 .navbar .navbar-brand {
@@ -225,8 +227,17 @@ a:focus {
         color: #ffffff;
     }
     
+    .navbar .navbar-brand:hover {
+        color: var(--green);
+    }
+    
+
     .navbar.nav-sticky .navbar-brand {
-        color: white;
+        color: var(--primary-color);
+    }
+
+    .navbar.nav-sticky .navbar-brand:hover {
+        color: var(--blue);
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -244,7 +255,7 @@ a:focus {
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: var(--orange);
+        color: var(--green);
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -268,6 +279,10 @@ a:focus {
     .navbar .navbar-brand {
         font-size: 24px; /* Reduce el tamaño de la fuente */
         color: #ffffff; /* Texto blanco por defecto */
+    }
+    
+    .navbar .navbar-brand:hover {
+        color: var(--blue);
     }
     
     .navbar .navbar-nav {
@@ -303,13 +318,17 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .navbar .navbar-brand {
-        font-size: 18px; /* Reduce más el tamaño de la fuente */
+        font-size: 18px;
+    }
+
+    .navbar .navbar-brand:hover {
+        color: var(--blue);
     }
 }
 
 @media (max-width: 375px) {
     .navbar .navbar-brand {
-        display: none; /* Oculta el texto de la marca en pantallas muy pequeñas */
+        display: none; 
     }
 }
 
@@ -366,6 +385,10 @@ a:focus {
     margin-bottom: 15px;
 }
 
+.hero .hero-text h1 i{
+    color: var(--green);
+}
+
 .hero .hero-text h1 {
     color: #ffffff;
     font-size: 60px;
@@ -378,7 +401,7 @@ a:focus {
     display: inline-block;
     margin: 0;
     height: 3px;
-    color: var(--orange);
+    color: var(--green);
     font-size: 27px;
     font-weight: 600;
 }
@@ -533,7 +556,7 @@ a:focus {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--background);
-    background: white;
+    background: var(--primary-color);
 }
 
 .section-header p::before {
@@ -543,7 +566,7 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: var(--orange);
+    background: var(--green);
     z-index: -1;
 }
 
@@ -554,7 +577,7 @@ a:focus {
     height: 3px;
     top: 11px;
     left: 3px;
-    background: var(--orange);
+    background: var(--green);
     z-index: 1;
 }
 
@@ -656,10 +679,6 @@ a:focus {
 /******* Experience CSS ********/
 /*******************************/
 .experience {
-    background: linear-gradient( var(--background),  #192330cb), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     padding: 45px 0 15px 0;
 }
@@ -737,7 +756,7 @@ a:focus {
     top: 44px;
     font-size: 16px;
     font-weight: 600;
-    color: white;
+    color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
@@ -755,13 +774,10 @@ a:focus {
 
 .experience .timeline .timeline-text {
     padding: 30px;
-    background: linear-gradient(#1f3fa8, rgba(23, 111, 194, 0.918)), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: var(--background);
     position: relative;
     border-right: 5px solid #dddddd;
-    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    box-shadow: 10px 0 40px rgba(255, 255, 255, 0.185);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
@@ -853,7 +869,7 @@ a:focus {
 
 .service .service-icon {
     font-size: 100px;
-    color: white;
+    color: var(--primary-color);
     transition: .3s;
 }
 
@@ -879,6 +895,7 @@ a:focus {
 }
 
 .skills-list li img {
+    cursor: pointer;
     width: 70px;
     height: 70px;
     transition: 0.5s ease;
@@ -898,11 +915,11 @@ a:focus {
 }
 
 .service i:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .skills-list li img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -911,17 +928,10 @@ a:focus {
 /*******************************/
 .portfolio {
     color: var(--background);
-    background: linear-gradient(#1f3fa8a2, rgba(23, 111, 194, 0.548)), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     padding: 45px 0 15px;
 }
 
-.portfolio .container {
-    max-width: 75dvw;
-}
 
 #portfolio-filter {
     padding: 0;
@@ -948,7 +958,7 @@ a:focus {
 
 #portfolio-filter li:hover,
 #portfolio-filter li.filter-active {
-    color: white;
+    color: var(--primary-color);
     background: transparent;
     box-shadow: inset 0 0 0 0 var(--blue);
     border-color: var(--blue);
@@ -966,10 +976,51 @@ a:focus {
     background: var(--background);
     border-radius: 10px;
     overflow: hidden;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+    box-shadow: 10px 0 40px rgba(255, 255, 255, 0.185);
+}
+.portfolio-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Alinea los botones al final del contenedor */
 }
 
+.btn-plus,
+.demo-button {
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.github-2-button {
+    background-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-wrap .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.portfolio-wrap .skills-list li img {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease;
+}
 .portfolio-img {
     flex: 1; /* Ocupa 1 parte del espacio disponible */
     align-items: center; /* Centra verticalmente la imagen */
@@ -1022,11 +1073,6 @@ a:focus {
     margin: 45px 0;
     padding: 90px 0;
     background: var(--blue);
-}
-
-.banner .container {
-    max-width: 750px;
-    text-align: center;
 }
 
 .banner .section-header {
@@ -1321,10 +1367,6 @@ a:focus {
     background: var(--blue);
 }
 
-.testimonial .container {
-    max-width: 900px;
-}
-
 .testimonial .testimonial-icon {
     margin-bottom: 45px;
     text-align: center;
@@ -1408,7 +1450,6 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: var(--background);
 }
 
 .contact .container-fluid {
