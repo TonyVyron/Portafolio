@@ -19,37 +19,9 @@
   }
 
 body {
-    background: radial-gradient(125% 140% at 50% 90%, var(--background) 40%, var(--blue) 100%);
+    background: radial-gradient(100% 140% at 50% 90%, var(--background) 55%, var(--blue) 100%);
     color: var(--primary-color);
     font-family: "Montserrat", sans-serif;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: auto; /* Alinea los botones al final del contenedor */
-}
-
-.github-button {
-    display: flex;
-    font-size: 25px;
-    margin-top: 10px;
-    background-color: #333;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.github-button i {
-    transition: transform 0.3s, color 0.3s;
-}
-
-.github-button:hover i {
-    transform: scale(1.3);
-    color: var(--primary-color);
 }
 
 
@@ -224,8 +196,12 @@ a:focus {
     }
     
     .navbar.nav-sticky {
-        padding: 10px 60px;
-        background: var(--background) !important;
+        padding: 15px 60px;
+        z-index: 1000;
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        background-color: rgba(2, 2, 2, 0.514) !important;; /* Color oscuro con transparencia */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, padding 0.3s;
     }
     
     .navbar .navbar-brand {
@@ -278,7 +254,12 @@ a:focus {
     }
     
     .navbar.nav-sticky {
-        background: var(--background) !important; /* Cambia al color de fondo al hacer scroll */
+        padding: 10px 60px;
+        z-index: 1000;
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        background-color: rgba(2, 2, 2, 0.514) !important;; /* Color oscuro con transparencia */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, padding 0.3s;
     }
     
     .navbar .navbar-brand {
@@ -328,13 +309,32 @@ a:focus {
     }
 
     .navbar .navbar-brand:hover {
-        color: var(--blue);
+        color: var(--green);
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: var(--green);
+    }
+    
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: var(--green);
     }
 }
 
 @media (max-width: 375px) {
     .navbar .navbar-brand {
         display: none; 
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: var(--green);
+    }
+    
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: var(--green);
     }
 }
 
@@ -354,10 +354,6 @@ a:focus {
     width: 100%;
     height: 100vh; /* Ajusta la altura al 100% de la ventana */
     overflow: hidden;
-    background: linear-gradient(#1a45d1ce, rgba(13, 43, 71, 0.774)), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hero .container-fluid {
@@ -412,6 +408,35 @@ a:focus {
     font-weight: 600;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Alinea los botones al final del contenedor */
+}
+
+.github-button {
+    box-shadow: 2px 8px 15px rgba(255, 255, 255, 0.185);
+    display: flex;
+    font-size: 25px;
+    margin-top: 10px;
+    background-color: var(--background);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-button i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.github-button:hover i {
+    transform: scale(1.3);
+    color: var(--primary-color);
+}
+
 .hero .hero-text .typed-text {
     display: none;
 }
@@ -419,28 +444,30 @@ a:focus {
 .hero .hero-text .typed-cursor {
     font-size: 35px;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--primary-color);
 }
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: var(--blue);
+    margin-right: 20px;
+    color: var(--background);
     border-radius: 30px;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
+    background: var(--primary-color);;
+    box-shadow: inset 0 0 0 50px var(--primary-color);;
 }
 
 .hero .hero-btn .btn:hover {
     border-radius: 30px;
-    color: #ffffff;
+    color: var(--primary-color);
     background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+    box-shadow: inset 0 0 0 0 var(--primary-color);;
+    border-color: var(--primary-color);;
 }
 
-.hero .hero-btn .btn:first-child {
-    margin-right: 10px;
+.hero .hero-btn a:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último enlace */
 }
+
 
 @media (max-width: 991.98px) {
     .hero {
@@ -995,24 +1022,35 @@ a:focus {
 
 .btn-plus,
 .demo-button {
-    background-color: #007bff;
+    box-shadow: 10px 0 40px rgba(255, 255, 255, 0.185);
+    background-color: var(--blue);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
 }
 
 .github-2-button {
-    background-color: #333;
+    box-shadow: 10px 0 40px rgba(255, 255, 255, 0.185);
+    background-color: var(--background);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.github-2-button i, .demo-button i, .btn-plus i  {
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.demo-button:hover i, .github-2-button:hover i, .btn-plus:hover i{
+    transform: scale(1.3);
+    color: var(--primary-color);
 }
 
 .portfolio-wrap .skills-list {
