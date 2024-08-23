@@ -3,10 +3,10 @@
 /*******************************/
 
  .container {
-    max-width: 70vw;
+    max-width: 65vw;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 950px) {
     .container {
         max-width: 100vw;
     }
@@ -72,7 +72,7 @@ a:focus {
 
 .btn {
     padding: 12px 25px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--primary-color);
@@ -148,7 +148,7 @@ a:focus {
     padding: 8px 0;
     text-align: center;
     line-height: 1;
-    font-size: 22px;
+    font-size: 15px;
     right: 15px;
     bottom: 15px;
     z-index: 9;
@@ -194,9 +194,13 @@ a:focus {
     background-color: var(--primary-color);
     color: var(--background);
     margin: 0;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 700;
     transition: .5s;
+}
+
+.navbar-nav a {
+    font-size:15px;
 }
 
 .navbar .dropdown-menu {
@@ -236,7 +240,6 @@ a:focus {
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
         color: var(--primary-color);
-        font-size: 18px;
         font-weight: 600;
     }
     
@@ -314,7 +317,7 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .navbar .navbar-brand {
-        font-size: 18px;
+        font-size: 15px;
      }
     .navbar .navbar-brand:hover {
         transform: scale(1.1);
@@ -336,7 +339,7 @@ a:focus {
 
 @media (max-width: 375px) {
     .navbar .navbar-brand {
-        font-size: 18px;
+        font-size: 15px;
      }
 
     .navbar.nav-sticky {
@@ -369,7 +372,11 @@ a:focus {
 /********** Hero CSS ***********/
 /*******************************/
 .hero-text {
-    font-size: 27px;
+    font-size: 16px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
 }
 .hero {
     display: flex;
@@ -410,7 +417,7 @@ a:focus {
 
 .hero .hero-text p {
     color: var(--primary-color);
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -421,9 +428,9 @@ a:focus {
 
 .hero .hero-text h1 {
     color: var(--primary-color);
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     margin-bottom: 15px;
 }
 
@@ -432,7 +439,7 @@ a:focus {
     margin: 0;
     height: 3px;
     color: var(--green);
-    font-size: 27px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -445,7 +452,7 @@ a:focus {
 .github-button {
     box-shadow:var(--box-shadow-color-low);
     display: flex;
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 10px;
     background-color: var(--background);
     border-radius: 50%;
@@ -470,7 +477,7 @@ a:focus {
 }
 
 .hero .hero-text .typed-cursor {
-    font-size: 35px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--primary-color);
 }
@@ -506,16 +513,7 @@ a:focus {
         padding: 0 15px;
     }
     
-    .hero .hero-text p {
-        font-size: 18px;
-    }
-    
-    .hero .hero-text h1 {
-        font-size: 45px;
-    }
-    
     .hero .hero-text h2 {
-        font-size: 25px;
         height: 25px;
     }
     
@@ -538,16 +536,7 @@ a:focus {
         text-align: center;
     }
     
-    .hero .hero-text p {
-        font-size: 18px;
-    }
-    
-    .hero .hero-text h1 {
-        font-size: 45px;
-    }
-    
     .hero .hero-text h2 {
-        font-size: 25px;
         height: 25px;
     }
     
@@ -574,15 +563,15 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .hero .hero-text p {
-        font-size: 16px;
+        font-size: 12px;
     }
     
     .hero .hero-text h1 {
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .hero .hero-text h2 {
-        font-size: 18px;
+        font-size: 15px;
         height: 18px;
     }
     
@@ -621,7 +610,7 @@ a:focus {
     padding: 5px;
     padding-left: 15px;
     position: relative;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -654,13 +643,13 @@ a:focus {
 .section-header h2 {
     margin: 0;
     position: relative;
-    font-size: 45px;
+    font-size: 28px;
     font-weight: 700;
 }
 
 @media (max-width: 767.98px) {
     .section-header h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -701,7 +690,7 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .about .skills {
@@ -715,7 +704,7 @@ a:focus {
 .about .skill-name p {
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -826,7 +815,7 @@ a:focus {
     position: absolute;
     width: 100%;
     top: 44px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -859,20 +848,20 @@ a:focus {
 
 .experience .timeline .timeline-text h2 {
     margin: 0 0 5px 0;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .experience .timeline .timeline-text h4 {
     margin: 0 0 10px 0;
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
     font-weight: 400;
 }
 
 .experience .timeline .timeline-text p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 @media (max-width: 767.98px) {
@@ -942,7 +931,7 @@ a:focus {
 }
 
 .service .service-icon {
-    font-size: 100px;
+    font-size: 80px;
     color: var(--primary-color);
     cursor: pointer;
     transition: 0.5s ease;
@@ -967,8 +956,8 @@ a:focus {
 
 .skills-list li img {
     cursor: pointer;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     transition: 0.5s ease;
 }
 
@@ -1017,7 +1006,7 @@ a:focus {
     display: inline-block;
     margin: 5px;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--primary-color);
     background: var(--blue);
@@ -1080,7 +1069,7 @@ a:focus {
 }
 
 .github-2-button i, .demo-button i, .btn-plus i  {
-    font-size: 20px;
+    font-size: 18px;
     transition: transform 0.3s, color 0.3s;
 }
 
@@ -1129,7 +1118,7 @@ a:focus {
 }
 
 .portfolio-text h3 {
-    font-size: 1.5em;
+    font-size: 16px;
     margin: 0 0 10px;
 }
 
@@ -1167,6 +1156,7 @@ a:focus {
 }
 
 .contact .contact-form input {
+    font-size: 14px;
     color: var(--primary-color);
     padding: 15px 0;
     background: none;
@@ -1176,6 +1166,7 @@ a:focus {
 }
 
 .contact .contact-form textarea {
+    font-size: 14px;
     color: var(--primary-color);
     height: 90px;
     padding: 15px 0;
@@ -1253,14 +1244,14 @@ a:focus {
 
 .footer .footer-info h2 {
     margin-bottom: 18px;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--primary-color);
 }
 
 .footer .footer-info h3 {
     margin-bottom: 25px;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--primary-color);
 }
@@ -1273,7 +1264,7 @@ a:focus {
 
 .footer .footer-menu p {
     color: var(--primary-color);
-    font-size: 22px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 18px;
     padding: 0 15px;
@@ -1347,17 +1338,17 @@ a:focus {
 @media (max-width: 575.98px) {
     .footer .footer-info h2 {
         margin-bottom: 18px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
     }
 
     .footer .footer-info h3 {
         margin-bottom: 18px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .footer .footer-menu p {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 16px;
         padding: 0 5px;
     }
@@ -1413,7 +1404,7 @@ a:focus {
     opacity: 0.8;
 }
 
-.skills-list {
+.portafolio-wrap .skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -1422,21 +1413,27 @@ a:focus {
     padding: 0;
 }
 
-.skills-list li img {
+.portafolio-wrap .skills-list li img {
     width: 35px;
     height: 35px;
+    transition: 0.5s ease;
 }
-
 .portafolio-buttons {
     display: flex;
     gap: 10px;
     margin-top: auto; /* Alinea los botones al final del contenedor */
 }
 .portafolio-text{
+    font-size: 15px;
     padding-left: 20px;
     padding-right: 20px;
 
 }
+
+.portafolio-text h2{
+    font-size: 18px;
+}
+
 
 .portafolio-img, .portafolio-text {
     flex: 1;
