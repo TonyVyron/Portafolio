@@ -21,6 +21,11 @@
 --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 --navbar-background: rgba(2, 2, 2, 0.514) !important; */
 :root {
+    --text-h2: 28px;
+    --text-h3: 18px;
+    --text-h4: 16px;
+    --text-p: 14px;
+    --text-button:14px;
     --background: rgb(18, 17, 26);
     --background-cards: rgb(25, 24, 32);
     --blue: #1f5ea8;
@@ -33,7 +38,7 @@
   }
 
 body {
-    background: radial-gradient(100% 140% at 50% 90%, var(--background) 65%, var(--blue) 95%);
+    background: radial-gradient(100% 140% at 50% 90%, var(--background) 62%, var(--blue) 100%);
     color: var(--primary-color);
     font-family: "Montserrat", sans-serif;
 }
@@ -72,7 +77,7 @@ a:focus {
 
 .btn {
     padding: 12px 25px;
-    font-size: 12px;
+    font-size: var(--text-button);
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--primary-color);
@@ -371,12 +376,9 @@ a:focus {
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
-.hero-text {
-    font-size: 16px;
-}
 
 .hero-text h4 {
-    font-size: 18px;
+    font-size: var(--text-h4)
 }
 .hero {
     display: flex;
@@ -417,7 +419,7 @@ a:focus {
 
 .hero .hero-text p {
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: var(--text-p);
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -439,7 +441,7 @@ a:focus {
     margin: 0;
     height: 3px;
     color: var(--green);
-    font-size: 18px;
+    font-size: var(--text-h2);
     font-weight: 600;
 }
 
@@ -472,12 +474,12 @@ a:focus {
     color: var(--primary-color);
 }
 
-.hero .hero-text .typed-text {
+.typed-text {
     display: none;
 }
 
 .hero .hero-text .typed-cursor {
-    font-size: 18px;
+    font-size: var(--text-h2);
     font-weight: 300;
     color: var(--primary-color);
 }
@@ -563,7 +565,7 @@ a:focus {
 
 @media (max-width: 575.98px) {
     .hero .hero-text p {
-        font-size: 12px;
+        font-size: var(--text-p);
     }
     
     .hero .hero-text h1 {
@@ -571,7 +573,7 @@ a:focus {
     }
     
     .hero .hero-text h2 {
-        font-size: 15px;
+        font-size: var(--text-h2);
         height: 18px;
     }
     
@@ -610,7 +612,7 @@ a:focus {
     padding: 5px;
     padding-left: 15px;
     position: relative;
-    font-size: 12px;
+    font-size: var(--text-p);
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -643,13 +645,13 @@ a:focus {
 .section-header h2 {
     margin: 0;
     position: relative;
-    font-size: 28px;
+    font-size: var(--text-h2);
     font-weight: 700;
 }
 
 @media (max-width: 767.98px) {
     .section-header h2 {
-        font-size: 25px;
+        font-size: var(--text-h2);
     }
 }
 
@@ -690,7 +692,7 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 15px;
+    font-size: var(--text-p);
 }
 
 .about .skills {
@@ -704,7 +706,7 @@ a:focus {
 .about .skill-name p {
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: var(--text-p);
     font-weight: 400;
 }
 
@@ -815,7 +817,7 @@ a:focus {
     position: absolute;
     width: 100%;
     top: 44px;
-    font-size: 14px;
+    font-size: var(--text-p);
     font-weight: 600;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -846,22 +848,22 @@ a:focus {
     border-left: 5px solid var(--primary-color);
 }
 
-.experience .timeline .timeline-text h2 {
+.experience .timeline .timeline-text h3 {
     margin: 0 0 5px 0;
-    font-size: 16px;
+    font-size: var(--text-h3);
     font-weight: 600;
 }
 
 .experience .timeline .timeline-text h4 {
     margin: 0 0 10px 0;
-    font-size: 15px;
+    font-size: var(--text-h4);
     font-style: italic;
     font-weight: 400;
 }
 
 .experience .timeline .timeline-text p {
     margin: 0;
-    font-size: 14px;
+    font-size: var(--text-p);
 }
 
 @media (max-width: 767.98px) {
@@ -931,10 +933,15 @@ a:focus {
 }
 
 .service .service-icon {
-    font-size: 80px;
+    font-size: 70px;
     color: var(--primary-color);
     cursor: pointer;
     transition: 0.5s ease;
+}
+
+
+.service h3 {
+    font-size: var(--text-h3);
 }
 
 .skills-list {
@@ -956,8 +963,8 @@ a:focus {
 
 .skills-list li img {
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     transition: 0.5s ease;
 }
 
@@ -1006,7 +1013,7 @@ a:focus {
     display: inline-block;
     margin: 5px;
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: var(--text-button);
     font-weight: 600;
     color: var(--primary-color);
     background: var(--blue);
@@ -1069,7 +1076,7 @@ a:focus {
 }
 
 .github-2-button i, .demo-button i, .btn-plus i  {
-    font-size: 18px;
+    font-size: var(--text-h3);
     transition: transform 0.3s, color 0.3s;
 }
 
@@ -1088,8 +1095,6 @@ a:focus {
 }
 
 .portfolio-wrap .skills-list li img {
-    width: 50px;
-    height: 50px;
     transition: 0.5s ease;
 }
 .portfolio-img {
@@ -1118,12 +1123,12 @@ a:focus {
 }
 
 .portfolio-text h3 {
-    font-size: 16px;
+    font-size: var(--text-h3);
     margin: 0 0 10px;
 }
 
 .portfolio-text p {
-    font-size: 1em;
+    font-size: var(--text-p);
     margin: 0 0 20px;
 }
 
@@ -1156,7 +1161,7 @@ a:focus {
 }
 
 .contact .contact-form input {
-    font-size: 14px;
+    font-size:  var(--text-p);
     color: var(--primary-color);
     padding: 15px 0;
     background: none;
@@ -1166,7 +1171,7 @@ a:focus {
 }
 
 .contact .contact-form textarea {
-    font-size: 14px;
+    font-size: var(--text-p);
     color: var(--primary-color);
     height: 90px;
     padding: 15px 0;
@@ -1204,7 +1209,7 @@ a:focus {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-size: 14px;
+    font-size: var(--text-p);
     font-style: italic;
     color: var(--primary-color);
 }
@@ -1244,14 +1249,14 @@ a:focus {
 
 .footer .footer-info h2 {
     margin-bottom: 18px;
-    font-size: 18px;
+    font-size: var(--text-h2);
     font-weight: 700;
     color: var(--primary-color);
 }
 
 .footer .footer-info h3 {
     margin-bottom: 25px;
-    font-size: 16px;
+    font-size: var(--text-h3);
     font-weight: 600;
     color: var(--primary-color);
 }
@@ -1264,7 +1269,7 @@ a:focus {
 
 .footer .footer-menu p {
     color: var(--primary-color);
-    font-size: 12px;
+    font-size: var(--text-p);
     font-weight: 600;
     line-height: 18px;
     padding: 0 15px;
@@ -1286,7 +1291,7 @@ a:focus {
 
 .footer .footer-social a i {
     margin-right: 15px;
-    font-size: 18px;
+    font-size: var(--text-h3);
     color: var(--primary-color);
     transition: .3s;
 }
@@ -1338,23 +1343,24 @@ a:focus {
 @media (max-width: 575.98px) {
     .footer .footer-info h2 {
         margin-bottom: 18px;
-        font-size: 16px;
+        font-size: var(--text-h2);
         font-weight: 600;
     }
 
     .footer .footer-info h3 {
         margin-bottom: 18px;
-        font-size: 15px;
+        font-size: var(--text-h3);
     }
 
     .footer .footer-menu p {
-        font-size: 12px;
+        font-size: var(--text-p);
         line-height: 16px;
         padding: 0 5px;
     }
 }
 
 .portafolio-wrap {
+    box-shadow:  0 5px 28px rgba(255, 255, 255, 0.096);
     width: 100%;
     background: var(--background-cards);
     border-radius: 25px;
@@ -1391,16 +1397,19 @@ a:focus {
 }
 
 .project-lower p {
+    font-size: var(--text-p);
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
 }
 
 .portafolio-wrap h2 {
+    font-size: var(--text-h2);
     font-weight: 600;
 }
 
 .portafolio-wrap p {
+    font-size: var(--text-p);
     opacity: 0.8;
 }
 
@@ -1414,8 +1423,8 @@ a:focus {
 }
 
 .portafolio-wrap .skills-list li img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     transition: 0.5s ease;
 }
 .portafolio-buttons {
@@ -1431,7 +1440,7 @@ a:focus {
 }
 
 .portafolio-text h2{
-    font-size: 18px;
+    font-size: var(--text-h3);
 }
 
 
@@ -1454,7 +1463,6 @@ a:focus {
     margin-left: 50px;
     margin-bottom: 0px;
     transition: .3s;
-    box-shadow: var(--box-shadow-color-low);
 }
 
 
