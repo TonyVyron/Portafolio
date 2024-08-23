@@ -33,7 +33,7 @@
   }
 
 body {
-    background: radial-gradient(100% 140% at 50% 90%, var(--background) 55%, var(--blue) 100%);
+    background: radial-gradient(100% 140% at 50% 90%, var(--background) 65%, var(--blue) 95%);
     color: var(--primary-color);
     font-family: "Montserrat", sans-serif;
 }
