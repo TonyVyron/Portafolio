@@ -103,7 +103,7 @@
                                 <p>2 Años de Experiencia</p>
                                 <h2>Sobre mí</h2>
                             </div>
-                            <div class="about-text wow fadeInUp">
+                            <div class="about-text wow fadeInDown">
                                 <p>
                                     Ingeniero profesional especializado en desarrollo de software, con experiencia significativa en la creación de aplicaciones móviles tanto multiplataforma como nativas, así como en el desarrollo completo de soluciones web tanto en el frontend como en el backend
                                 </p>
@@ -143,7 +143,7 @@
                             <h2>Mis Habilidades</h2>
                         </header>
                         <div class="row">
-                            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.0s">
+                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.0s">
                                 <h3>Front-end</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
                                 <h3>Back-end</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
@@ -184,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
                                 <h3>Herramientas</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
@@ -224,7 +224,7 @@
                         <div class="timeline-text">
                             <div class="timeline-date">abr. 2024 - actualidad · 5 meses</div>
                             <h3>Desarrollador de Web Jr</h3>
-                            <h4>SCISA, En remoto</h4>
+                            <h4>SCISA, Monterrey, Nuevo León, México</h4>
                             <p>
                                 - Encargado del desarrollo del sistema interno SIA para el control de reportes de actividades y horas.<br>
                                 - Resolución de bugs front-end y back-end.<br>
@@ -382,7 +382,7 @@
                             <div class="portafolio-text">
                                
                                 <h2>Tablero de Proyectos</h2>
-                                <p>Aplicación web para gestión de proyectos que permite ver tareas, tiempos, actualizaciones, estados e integrantes. Los proyectos se organizan por periodo y color, facilitando una visualización clara y efectiva.</p>
+                                <p>Aplicación web para gestión de proyectos que permite ver tareas, actualizaciones, estados e integrantes. Los proyectos se organizan por periodo y color, facilitando una visualización clara y efectiva.</p>
                                 <ul class="skills-list">
                                     <li><img src="img/languages/vue.png" alt="Vue.js"></li>
                                     <li><img src="img/languages/html-5.png" alt="HTML5"></li>
@@ -498,34 +498,38 @@
         <!-- Contact Start -->
         <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
             <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-md-4"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="about-img">
+                            <img src="img/contact.svg" alt="Contact Image">
+                        </div>
+                    </div>
                     <div class="col-md-8">
-                        <div class="contact-form">
+                        <div class="contact-form wow zoomIn">
                             <div id="success"></div>
                             <div class="section-header text-left">
                                 <p>Enviame Correo</p>
                                 <h2>Contáctame</h2>
                             </div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <form action="https://formspree.io/f/xdknyqpz" method="POST">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Tu Nombre" required="required" data-validation-required-message="Por favor, ingresa tu nombre" />
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Tu Nombre" required="required" data-validation-required-message="Por favor, ingresa tu nombre" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico" required="required" data-validation-required-message="Por favor, ingresa tu correo electrónico" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Tu Correo Electrónico" required="required" data-validation-required-message="Por favor, ingresa tu correo electrónico" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por favor, ingresa un asunto" />
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por favor, ingresa un asunto" />
                                     <p class="help-block"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Por favor, ingresa tu mensaje"></textarea>
+                                    <textarea class="form-control" id="message" name="comments" placeholder="Mensaje" required="required" data-validation-required-message="Por favor, ingresa tu mensaje"></textarea>
                                     <p class="help-block"></p>
                                 </div>
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                                    <button class="btn" type="submit" id="sendMessageButton">Enviar Correo</button>
                                 </div>
                             </form>
                         </div>
@@ -533,6 +537,7 @@
                 </div>
             </div>
         </div>
+        
         
         <!-- Contact End -->
 

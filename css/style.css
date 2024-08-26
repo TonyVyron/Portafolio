@@ -17,7 +17,7 @@
 --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 --navbar-background: rgba(2, 2, 2, 0.514) !important; */
 :root {
-    --text-h2: 28px;
+    --text-h2: 26px;
     --text-h3: 18px;
     --text-h4: 16px;
     --text-p: 14px;
@@ -39,7 +39,7 @@
 .light-mode {
     --background: white;
     --background-cards: #f0f0f0;
-    --primary-color: black;
+    --primary-color: rgb(18, 17, 26);
     --primary-color-rgb: 0, 0, 0; 
     --navbar-icon: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Ícono del menú en negro */
     --orange: #3b3eff;
@@ -93,7 +93,7 @@ a:focus {
 
 .btn {
     background: var(--primary-color);
-    padding: 12px 25px;
+    padding: 8px 14px;
     font-size: var(--text-button);
     font-weight: 600;
     letter-spacing: 1px;
@@ -576,7 +576,6 @@ a:focus {
     }
     
     .hero .hero-btn .btn {
-        padding: 10px 15px;
         letter-spacing: 1px;
     }
     .hero .hero-image {
@@ -614,7 +613,6 @@ a:focus {
     }
     
     .hero .hero-btn .btn {
-        padding: 8px 10px;
         letter-spacing: 0;
     }
 
@@ -690,7 +688,8 @@ a:focus {
 .about {
     position: relative;
     width: 100%;
-    margin: -45px 0 45px 0;
+    padding: 30px 0 0 0;
+    margin-bottom: 35px;
 }
 
 .about .col-lg-6 {
@@ -765,10 +764,12 @@ a:focus {
 /*******************************/
 .experience {
     position: relative;
-    padding: 45px 0 0 0;
+    padding: 30px 0 0 0;
+    margin-bottom: 45px;
 }
 
 .experience .timeline {
+    transition: 0.5s ease;
     position: relative;
     width: 100%;
 }
@@ -942,6 +943,8 @@ a:focus {
 /********* Service CSS *********/
 /*******************************/
 .service {
+    padding: 45px 0 0 0;
+    margin-bottom: 30px;
     text-align: center;
     position: relative;
     width: 100%;
@@ -968,7 +971,7 @@ a:focus {
     font-size: var(--text-h3);
 }
 
-.skills-list {
+.skills-list { 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -978,6 +981,7 @@ a:focus {
 }
 
 .skills-list li {
+    transition: 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -990,6 +994,7 @@ a:focus {
     width: 50px;
     height: 50px;
     transition: 0.5s ease;
+
 }
 
 @media (min-width: 768px) {
@@ -1018,9 +1023,9 @@ a:focus {
 /******** Portfolio CSS ********/
 /*******************************/
 .portfolio {
-    color: var(--background);
     position: relative;
-    padding: 45px 0 0 0;
+    padding: 30px 0 0 0;
+    margin-bottom: 30px;
 }
 
 
@@ -1036,7 +1041,7 @@ a:focus {
     cursor: pointer;
     display: inline-block;
     margin: 5px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     font-size: var(--text-button);
     font-weight: 600;
     color: var(--primary-color);
@@ -1064,7 +1069,6 @@ a:focus {
 
 .portafolio-wrap {
     transition: 0.5s ease;
-    box-shadow:  var(--box-shadow-color-low);
     width: 100%;
     background: var(--background-cards);
     border-radius: 25px;
@@ -1156,6 +1160,7 @@ a:focus {
 }
 .portafolio-img {
     border-radius: 20px;
+    border-top-right-radius: 0px;
     padding-left: 50px;
     height: 200px; /* Fija la altura del contenedor de la imagen */
     overflow: hidden; /* Oculta la parte de la imagen que excede el contenedor */
@@ -1163,6 +1168,7 @@ a:focus {
 
 .portafolio-img img {
     border-radius: 20px;
+    border-top-right-radius: 0px;
     margin-top: 20px;
     width: 100%; 
     height: 100%;
@@ -1179,44 +1185,45 @@ a:focus {
 
 
 /*******************************/
-/********* Contact CSS *********/
+/********* Contact CSS **********/
 /*******************************/
-.contact {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
+.contact .row {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.contact .container-fluid {
-    background: url(../img/contact.svg) left center no-repeat;
-    background-size: contain;
+.contact .about-img {
+    transition: 0.5s ease;
+    text-align: center;
+}
+
+.contact .about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .contact .contact-form {
-    position: relative;
-    padding: 90px 0 90px 45px;
-    background: var(--background);
+    transition: 0.5s ease;
+    padding: 40px 0 45px 45px;
+    width: 100%;
 }
 
-.contact .contact-form input {
-    font-size:  var(--text-p);
-    color: var(--primary-color);
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--primary-color-rgb));
-}
-
+.contact .contact-form input,
 .contact .contact-form textarea {
     font-size: var(--text-p);
     color: var(--primary-color);
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
+    padding: 15px;
+    background: var(--background-cards);
+    border-radius: 15px;
     border: none;
-    border-bottom: 1px solid rgba(var(--primary-color-rgb));
+    border-bottom: 1px solid rgba(var(--primary-color-rgb),0.4);
+    box-shadow: 0 5px 10px rgba(var(--primary-color-rgb),0.2);
+}
+
+.contact .contact-form textarea {
+    height: 90px;
 }
 
 .contact .contact-form .form-control::placeholder {
@@ -1224,20 +1231,16 @@ a:focus {
     opacity: 1;
 }
 
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: var(--primary-color);
-}
-
 .contact .contact-form .btn {
     margin-top: 35px;
+    border-radius: 30px;
     color: var(--background);
     background: var(--primary-color);
     box-shadow: inset 0 0 0 50px var(--primary-color);
 }
 
 .contact .contact-form .btn:hover {
-    color:var(--primary-color);
+    color: var(--primary-color);
     background: transparent;
     box-shadow: inset 0 0 0 0 var(--primary-color);
     border-color: var(--primary-color);
@@ -1253,14 +1256,20 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: none;
+
+    .contact .about-img{
+        display: none;
     }
-    
+    .contact .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .contact .contact-form {
-        padding: 90px 0;
+        padding: 45px 0;
     }
 }
+
 
 /*******************************/
 /********* Footer CSS **********/
