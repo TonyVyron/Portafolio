@@ -8,14 +8,6 @@
     }
 }
 
-/* --background: #13181f;
---blue: #1f5ea8;
---orange: #b7fa00 ;
---primary-color: white;
---box-shadow-color-low: 2px 8px 15px rgba(255, 255, 255, 0.185);
---box-shadow-color-fort:  10px 0 40px rgba(255, 255, 255, 0.185);
---navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
---navbar-background: rgba(2, 2, 2, 0.514) !important; */
 :root {
     --text-h2: 26px;
     --text-h3: 18px;
@@ -29,7 +21,7 @@
     --orange: #ffa500;
     --primary-color: white;
     --primary-color-rgb: 255, 255, 255; 
-    --box-shadow-color-low: 0 5px 30px rgba(255, 255, 255, 0.13);
+    --box-shadow-color-low: 1px 5px 20px rgba(255, 255, 255, 0.110);
     --box-shadow-color-fort:  10px 0 40px rgba(226, 226, 226, 0.185);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --navbar-background: rgba(2, 2, 2, 0.514) !important;
@@ -44,7 +36,7 @@
     --navbar-icon: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Ícono del menú en negro */
     --orange: #3134fd;
     --blue: #ffa500;
-    --box-shadow-color-low: 0 5px 30px rgba(0, 0, 0, 0.356);
+    --box-shadow-color-low: 1px 5px 20px rgba(0, 0, 0, 0.300);
     --box-shadow-color-fort: 10px 0 40px rgba(0, 0, 0, 0.295);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --navbar-background: rgba(243, 243, 243, 0.486) !important;
@@ -219,7 +211,6 @@ a:focus {
     transition: .5s;
     z-index: 999;
 }
-
 .navbar.nav-sticky {
     position: fixed;
     top: 0;
@@ -256,7 +247,14 @@ a:focus {
     background: var(--primary-color);
 }
 @media (min-width: 992px) {
+    .navbar .container-fluid{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 5px;
+     }
     .navbar {
+        padding: 0;
+        margin: 0;
         padding-bottom: 20px;
         padding-top: 20px;
         position: absolute;
@@ -268,6 +266,8 @@ a:focus {
     
     .navbar.nav-sticky {
         z-index: 1000;
+        padding: 0;
+        margin: 0;
         padding-bottom: 10px;
         padding-top: 10px;
         backdrop-filter: blur(10px); /* Aplica el desenfoque */
@@ -309,7 +309,14 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {   
+    .navbar-nav a {
+        margin-left: 10px;
+        font-size: var(--text-h4);
+    }
+    
     .navbar {
+        padding: 0;
+        margin: 0;
         width: 100%;
         background: transparent; /* Barra transparente cuando está en la parte superior */
         transition: background-color 0.5s;
@@ -364,6 +371,16 @@ a:focus {
 }
 
 @media (max-width: 991px) {
+    .navbar-nav a {
+        margin-left: 10px;
+        font-size: var(--text-h4);
+    }
+
+    .navbar .container-fluid{
+        width: 100%;
+        padding-right: 5px;
+     }
+    
     .navbar .navbar-brand {
         display: none;
     }
@@ -384,9 +401,10 @@ a:focus {
 }
 
 @media (max-width: 375px) {
-    .navbar .navbar-brand {
-        font-size: 15px;
-     }
+    .navbar-nav a {
+        margin-left: 10px;
+        font-size: var(--text-h4);
+    }
 
     .navbar-nav .nav-item .nav-link {
         color: var(--orange) !important;
@@ -410,7 +428,7 @@ a:focus {
 .hero {
     display: flex;
     margin-bottom: 45px;
-    padding: 60px 0 0 0;
+    padding: 30px 0 0 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -475,7 +493,7 @@ a:focus {
 }
 
 .github-button {
-    box-shadow:var(--box-shadow-color-low);
+    box-shadow:var(--box-shadow-color-fort);
     display: flex;
     font-size: var(--text-h2);
     margin-top: 10px;
@@ -528,8 +546,8 @@ a:focus {
     transition: 0.5s ease;
     box-shadow: var(--box-shadow-color-fort);
     background-color:var(--background);
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%; 
     object-fit: cover;
 }
@@ -585,8 +603,8 @@ a:focus {
     .hero .hero-image img {
         box-shadow: var(--box-shadow-color-fort);
         background-color:var(--background);
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%; /* Esto hace que la imagen sea circular */
         object-fit: cover;
     }
@@ -755,9 +773,10 @@ a:focus {
     margin-top: 15px;
 }
 
-@media (max-width: 991.98px) {
-    .about .about-content {
-        padding: 45px 0 0 0;
+
+@media (max-width: 767.98px) {
+    .about .about-img{
+        display: none;
     }
 }
 
@@ -863,10 +882,10 @@ a:focus {
 
 .experience .timeline .timeline-text {
     padding: 30px;
-  background: var(--background-cards);
+    background: var(--background-cards);
     position: relative;
     border-right: 5px solid var(--primary-color);
-    box-shadow: var(--box-shadow-color-fort);
+    box-shadow: var(--box-shadow-color-low);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
@@ -936,7 +955,6 @@ a:focus {
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
         border-right: 5px solid #dddddd;
-        box-shadow: var(--box-shadow-color-fort);
         border-left: 5px solid var(--primary-color);
     }
 }
@@ -1076,6 +1094,7 @@ a:focus {
     background: var(--background-cards);
     border-radius: 25px;
     color: var(--primary-color);
+    box-shadow: var(--box-shadow-color-low);
 }
 
 .project-uper {
@@ -1217,11 +1236,12 @@ a:focus {
 .contact .contact-form textarea {
     font-size: var(--text-p);
     color: var(--primary-color);
-    padding: 15px;
+    padding: 22px;
     background: var(--background-cards);
     border-radius: 15px;
     border: none;
-    border-bottom: 1px solid rgba(var(--primary-color-rgb),0.4);
+    border-bottom: 1px solid rgba(var(--primary-color-rgb),0.3);
+    box-shadow: var(--box-shadow-color-low);
 }
 
 .contact .contact-form textarea {

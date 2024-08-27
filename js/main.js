@@ -92,6 +92,19 @@
     });
     
     
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbarNav = document.querySelector('.navbar-nav');
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        
+        navbarNav.addEventListener('click', function() {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                var bsCollapse = new bootstrap.Collapse(document.getElementById('navbarCollapse'), {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
     
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
