@@ -9,11 +9,11 @@
 }
 
 :root {
-    --text-h2: 26px;
-    --text-h3: 18px;
-    --text-h4: 16px;
-    --text-p: 14px;
-    --text-button:14px;
+    --text-h2: 24px;
+    --text-h3: 16px;
+    --text-h4: 13.5px;
+    --text-p: 13.5px;
+    --text-button:13.5px;
     --background: rgb(18, 17, 26);
     --background-cards: rgb(39, 38, 46);
     --navbar-icon: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28256, 256, 256, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Ícono del menú en blanco */
@@ -21,8 +21,9 @@
     --orange: #ffa500;
     --primary-color: white;
     --primary-color-rgb: 255, 255, 255; 
-    --box-shadow-color-low: 1px 5px 20px rgba(255, 255, 255, 0.110);
-    --box-shadow-color-fort:  10px 0 40px rgba(226, 226, 226, 0.185);
+    --box-shadow-color-low: 0 0 20px rgba(255, 255, 255, 0.110);
+    --box-shadow-color-fort:  0 0 40px rgba(226, 226, 226, 0.185);
+    --box-shadow-back-to-top: 0 0 40px rgba(241, 241, 241, 0.70);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --navbar-background: rgba(2, 2, 2, 0.514) !important;
   }
@@ -36,8 +37,9 @@
     --navbar-icon: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Ícono del menú en negro */
     --orange: #3134fd;
     --blue: #ffa500;
-    --box-shadow-color-low: 1px 5px 20px rgba(0, 0, 0, 0.300);
-    --box-shadow-color-fort: 10px 0 40px rgba(0, 0, 0, 0.295);
+    --box-shadow-color-low: 0 0 20px rgba(0, 0, 0, 0.300);
+    --box-shadow-color-fort: 0 0 40px rgba(0, 0, 0, 0.295);
+    --box-shadow-back-to-top:  0 0 40px rgba(0, 0, 0,1);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --navbar-background: rgba(243, 243, 243, 0.486) !important;
 }
@@ -173,18 +175,16 @@ a:focus {
 .back-to-top {
     background: var(--orange);
     position: fixed;
+    padding: 15px;
     display: none;
-    width: 44px;
-    height: 64px;
-    padding: 8px 0;
     text-align: center;
     line-height: 1;
-    font-size: 15px;
+    font-size: 24px;
     right: 15px;
     bottom: 15px;
     z-index: 9;
-    border-radius: 8px; 
-    transition: background 0.5s, box-shadow 0.5s, transform 0.5s;
+    border-radius: 50%; 
+    transition: .5s;
 }
 
 .back-to-top i {
@@ -193,14 +193,13 @@ a:focus {
 }
 
 .back-to-top:hover {
-    background: transparent;
-    border: 1px solid var(--orange); 
-    box-shadow: inset 0 0 0 50px transparent; 
+    box-shadow: var(--box-shadow-back-to-top);
+    transform: scale(1.1); 
+    background: var(--orange);
 }
 
 .back-to-top:hover i {
-    color: var(--primary-color);
-    transform: scale(1.1); /
+    transform: scale(1.1); 
 }
 
 /**********************************/
@@ -510,8 +509,12 @@ a:focus {
     transition: transform 0.3s, color 0.3s;
 }
 
+.github-button:hover {
+    transform: scale(1.1);
+}
+
 .github-button:hover i {
-    transform: scale(1.3);
+    transform: scale(1.1);
     color: var(--primary-color);
 }
 
@@ -808,6 +811,7 @@ a:focus {
 }
 
 .experience .timeline .timeline-item {
+    transition: 0.5s ease;
     position: relative;
     background: inherit;
     width: 50%;
@@ -815,11 +819,13 @@ a:focus {
 }
 
 .experience .timeline .timeline-item.left {
+    transition: 0.5s ease;
     left: 0;
     padding-right: 30px;
 }
 
 .experience .timeline .timeline-item.right {
+    transition: 0.5s ease;
     left: 50%;
     padding-left: 30px;
 }
@@ -1222,7 +1228,6 @@ a:focus {
 
 .contact .about-img img {
     max-width: 100%;
-    height: auto;
     border-radius: 15px;
 }
 

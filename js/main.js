@@ -91,6 +91,23 @@
         }
     });
     
+    function copyWhatsAppNumber() {
+        const phoneNumber = "9931074765"; // Reemplaza con tu número de WhatsApp
+        navigator.clipboard.writeText(phoneNumber).then(() => {
+            alert("Número de WhatsApp copiado al portapapeles: " + phoneNumber);
+        }).catch(err => {
+            console.error("Error al copiar el número de WhatsApp: ", err);
+        });
+    }
+    
+    function copyEmail() {
+        const email = "tony@example.com"; // Reemplaza con tu dirección de correo electrónico
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Dirección de correo copiada al portapapeles: " + email);
+        }).catch(err => {
+            console.error("Error al copiar la dirección de correo: ", err);
+        });
+    }
     
     document.addEventListener('DOMContentLoaded', function() {
         var navbarNav = document.querySelector('.navbar-nav');
