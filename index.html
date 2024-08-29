@@ -22,7 +22,14 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
-        <script src="js/main.js"></script>
+        <script>
+            (function() {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'light') {
+                    document.body.classList.add('light-mode');
+                }
+            })();
+        </script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
