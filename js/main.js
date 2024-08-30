@@ -49,6 +49,11 @@
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
+            
+            // Cerrar el menú colapsado en móvil después de hacer clic
+            if ($(window).width() < 992) {
+                $('.navbar-collapse').collapse('hide');
+            }
         }
     });
 
