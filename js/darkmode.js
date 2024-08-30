@@ -17,3 +17,14 @@ themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem('light-mode')
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
+
+document.querySelectorAll('[data-target]').forEach(function (icon) {
+  icon.onclick = function (event) {
+    event.preventDefault(); // Evita la acción predeterminada del enlace
+    var targetId = this.getAttribute('data-target'); // Obtener el ID del target
+    var targetElement = document.getElementById(targetId); // Encontrar la imagen correspondiente
+    if (targetElement) {
+      targetElement.click(); // Disparar el clic en la imagen principal
+    }
+  };
+});
