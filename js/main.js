@@ -10,27 +10,6 @@
         }, 1);
     };
     loader();
-    
-    // Mantener la preferencia del usuario al recargar la página
-    window.addEventListener('load', function() {
-        const theme = localStorage.getItem('theme');
-        const themeIcon = document.getElementById('theme-toggle').querySelector('i');
-
-        if (theme === 'light') {
-            document.body.classList.add('light-mode');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
-
-        // Verificar si el tema se ha cargado correctamente
-        if (!document.body.classList.contains('light-mode') && theme === 'light') {
-            // Si el tema no se carga correctamente, mostrar nuevamente el loader
-            $('#loader').addClass('show');
-        } else {
-            // Ocultar el loader si el tema se cargó correctamente
-            $('#loader').removeClass('show');
-        }
-    });
 
     // Iniciar WOW.js
     new WOW().init();
@@ -136,22 +115,5 @@
             console.error("Error al copiar la dirección de correo: ", err);
         });
     }
-
-    // Cambiar tema
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-        document.body.classList.toggle('light-mode');
-        
-        // Cambia el ícono dependiendo del tema
-        const themeIcon = this.querySelector('i');
-        if (document.body.classList.contains('light-mode')) {
-            localStorage.setItem('theme', 'light');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        } else {
-            localStorage.setItem('theme', 'dark');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-    });
 
 })(jQuery);

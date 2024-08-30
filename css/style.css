@@ -44,10 +44,6 @@
     --navbar-background: rgba(243, 243, 243, 0.486) !important;
 }
 
-#theme-toggle{
-    cursor: pointer;
-}
-
 body {
     background: radial-gradient(100% 140% at 50% 90%, var(--background) 62%, #3134fd 100%);
     color: var(--primary-color);
@@ -100,30 +96,39 @@ a:focus {
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
 }
-/* Estilos para el ícono del tema */
-#theme-toggle i {
-    transition: color 0.3s;
-}
 
-/* Icono del sol */
-#theme-toggle i.fa-sun {
-    font-size: var(--text-h2);
-    color:  #ffa500; /* Amarillo para el sol */
-}
-
-/* Icono de la luna */
-#theme-toggle i.fa-moon {
-    font-size: var(--text-h2);
-    color: black; /* Blanco para la luna */
-}
-
-/* Estilos para el contenedor del ícono (opcional) */
-#theme-toggle {
-    display: inline-block;
-    padding: 8px;
+#theme-switch {
+    cursor: pointer;
+    padding: 2px;
     border-radius: 50%;
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#theme-switch svg{
+    height: 35px;
+    width: 35px;
+    fill: #ffa500;
+    transition: .5s ease;
+}
+#theme-switch:hover{
+    transform: scale(1.15); 
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.light-mode #theme-switch svg:first-child{
+    display: none;
+}
+
+.light-mode #theme-switch svg:last-child{
+    fill: var(--primary-color);
+    display: block;
+}
+
 
 #loader {
     position: fixed;
