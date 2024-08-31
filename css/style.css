@@ -25,7 +25,7 @@
     --box-shadow-color-fort:  0 0 40px rgba(226, 226, 226, 0.185);
     --box-shadow-back-to-top: 0 0 40px rgba(241, 241, 241, 0.70);
     --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --navbar-background: rgba(2, 2, 2, 0.514) !important;
+    --navbar-background: rgba(2, 2, 2, 0.295) !important;
   }
 
   /* Modo Claro */
@@ -259,12 +259,12 @@ a:focus {
     .navbar {
         padding: 0;
         margin: 0;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding-bottom: 28px;
+        padding-top: 28px;
         position: absolute;
         width: 100%;
         background: transparent !important;
-        border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.2);
+        border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.05);
         z-index: 9;
     }
     
@@ -272,8 +272,8 @@ a:focus {
         z-index: 1000;
         padding: 0;
         margin: 0;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding-bottom: 16px;
+        padding-top: 16px;
         backdrop-filter: blur(10px); /* Aplica el desenfoque */
         background-color: var(--navbar-background) !important; /* Color oscuro con transparencia */
         box-shadow: var(--navbar-shadow);
@@ -422,6 +422,27 @@ a:focus {
     .navbar .navbar-brand {
         display: none;
     }
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        position: absolute;
+        width: 100%;
+        background: transparent !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        background-color: var(--navbar-background) !important; /* Color oscuro con transparencia */
+        box-shadow: var(--navbar-shadow);
+        transition: background-color 0.3s, padding 0.3s;
+    }
 }
 
 
@@ -554,8 +575,8 @@ a:focus {
     transition: 0.5s ease;
     box-shadow: var(--box-shadow-color-fort);
     background-color:var(--background);
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%; 
     object-fit: cover;
 }
@@ -571,6 +592,29 @@ a:focus {
     
     .hero .hero-text h2 {
         height: 25px;
+    }
+    
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        position: absolute;
+        width: 100%;
+        background: transparent !important;
+        border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.05);
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        background-color: var(--navbar-background) !important; /* Color oscuro con transparencia */
+        box-shadow: var(--navbar-shadow);
+        transition: background-color 0.3s, padding 0.3s;
     }
     
 }
@@ -590,6 +634,10 @@ a:focus {
     
     .hero .hero-text h2 {
         height: 25px;
+    }
+
+    .hero .hero-text h1 {
+        letter-spacing: 1px;
     }
     
     .hero .hero-btn {
@@ -611,14 +659,37 @@ a:focus {
     .hero .hero-image img {
         box-shadow: var(--box-shadow-color-fort);
         background-color:var(--background);
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%; /* Esto hace que la imagen sea circular */
         object-fit: cover;
     }
     .hero-buttons {
         justify-content: center;
       }
+
+      .navbar {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        position: absolute;
+        width: 100%;
+        background: transparent !important;
+        border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.05);
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        background-color: var(--navbar-background) !important; /* Color oscuro con transparencia */
+        box-shadow: var(--navbar-shadow);
+        transition: background-color 0.3s, padding 0.3s;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -627,14 +698,19 @@ a:focus {
     }
     
     .hero .hero-text h1 {
-        font-size: 20px;
+        letter-spacing: 1px;
+        font-size: var(--text-h2);
     }
     
     .hero .hero-text h2 {
-        font-size: var(--text-h2);
+        font-size: var(--text-h3);
         height: 18px;
     }
-    
+    .hero .hero-text h3 {
+        font-size: var(--text-h3);
+        height: 18px;
+    }
+
     .hero .hero-btn {
         flex-direction: row;
         justify-content: center;
