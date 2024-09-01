@@ -51,7 +51,7 @@ body {
 }
 
 .container-fluid{
-    max-width: 1150px;
+    max-width: 1130px;
 }
 
 h1,
@@ -422,27 +422,6 @@ a:focus {
     .navbar .navbar-brand {
         display: none;
     }
-    .navbar {
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 8px;
-        padding-top: 8px;
-        position: absolute;
-        width: 100%;
-        background: transparent !important;
-        z-index: 9;
-    }
-    
-    .navbar.nav-sticky {
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 4px;
-        padding-top: 4px;
-        backdrop-filter: blur(10px); /* Aplica el desenfoque */
-        background-color: var(--navbar-background) !important; /* Color oscuro con transparencia */
-        box-shadow: var(--navbar-shadow);
-        transition: background-color 0.3s, padding 0.3s;
-    }
 }
 
 
@@ -452,8 +431,6 @@ a:focus {
 
 .hero {
     display: flex;
-    margin-bottom: 45px;
-    padding: 30px 0 0 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -583,15 +560,7 @@ a:focus {
 
 @media (max-width: 991.98px) {
     .hero {
-        padding-top: 60px;
-    }
-    
-    .hero .hero-content {
-        padding: 0 15px;
-    }
-    
-    .hero .hero-text h2 {
-        height: 25px;
+        padding-top: 30px;
     }
     
     .navbar {
@@ -599,7 +568,6 @@ a:focus {
         justify-content: center;
         padding-bottom: 16px;
         padding-top: 16px;
-        position: absolute;
         width: 100%;
         background: transparent !important;
         border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.05);
@@ -621,10 +589,8 @@ a:focus {
 
 @media (max-width: 767.98px) {
     .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 0;
     }
-    
     .hero,
     .hero .hero-text,
     .hero .hero-btn {
@@ -632,10 +598,6 @@ a:focus {
         text-align: center;
     }
     
-    .hero .hero-text h2 {
-        height: 25px;
-    }
-
     .hero .hero-text h1 {
         letter-spacing: 1px;
     }
@@ -668,12 +630,11 @@ a:focus {
         justify-content: center;
       }
 
-      .navbar {
+    .navbar {
         align-items: center;
         justify-content: center;
         padding-bottom: 12px;
         padding-top: 12px;
-        position: absolute;
         width: 100%;
         background: transparent !important;
         border-bottom: 0.5px solid rgba(var(--primary-color-rgb), 0.05);
@@ -702,23 +663,17 @@ a:focus {
         font-size: var(--text-h2);
     }
     
-    .hero .hero-text h2 {
-        font-size: var(--text-h3);
-        height: 18px;
-    }
     .hero .hero-text h3 {
-        font-size: var(--text-h3);
-        height: 18px;
+        letter-spacing: 1px;
+        font-size: var(--text-h2);
     }
-
+    .hero .hero-text h4 {
+        letter-spacing: 1px;
+        font-size: var(--text-h2);
+    }
     .hero .hero-btn {
         flex-direction: row;
         justify-content: center;
-    }
-
-    .hero .hero-btn .btn {
-        margin: 10px;
-        width: auto; /* Restablece el ancho para pantallas grandes */
     }
 
     .hero-buttons {
