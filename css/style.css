@@ -210,15 +210,31 @@ a:focus {
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
+/* Barra de Progreso */
+.progress-bar-nav {
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    top: 68px; /* Ajusta este valor según la altura del navbar */
+    z-index: 998; /* Debajo del navbar */
+}
+
+.filled {
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--background-cards), var(--orange));
+}
+
 .navbar {
     position: relative;
     transition: .5s;
-    z-index: 999;
+    z-index: 999; /* Encima de la barra de progreso */
 }
 .navbar.nav-sticky {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000; /* Encima de todo */
     box-shadow: var(--box-shadow-color)
 }
 
@@ -317,7 +333,7 @@ a:focus {
         margin-left: 10px;
         font-size: var(--text-h4);
     }
-    
+
     .navbar {
         padding: 0;
         margin: 0;
@@ -372,9 +388,16 @@ a:focus {
     .navbar .navbar-toggler-icon {
         background-image: var(--navbar-icon)
     }
+        
+    .progress-bar-nav{
+        display: none;
+    }
 }
 
 @media (max-width: 991px) {
+    .progress-bar-nav {
+        top: 57px; /* Ajusta este valor según la altura del navbar */
+    }
     .navbar-nav a {
         margin-left: 10px;
         font-size: var(--text-h4);
@@ -588,6 +611,10 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+
+    .progress-bar-nav {
+        top: 48px; /* Ajusta este valor según la altura del navbar */
+    }
     .hero {
         padding-top: 0;
     }
