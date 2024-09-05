@@ -215,7 +215,7 @@ a:focus {
     position: fixed;
     width: 100%;
     height: 4px;
-    top: 68px; /* Ajusta este valor según la altura del navbar */
+    top: 67px; /* Ajusta este valor según la altura del navbar */
     z-index: 998; /* Debajo del navbar */
 }
 
@@ -239,6 +239,7 @@ a:focus {
 }
 
 .navbar .navbar-brand {
+    cursor: pointer;
     padding-left: 8px;
     padding-right: 8px;
     background: var(--primary-color);
@@ -389,14 +390,14 @@ a:focus {
         background-image: var(--navbar-icon)
     }
         
-    .progress-bar-nav{
+    .navbar-collapse.show + .progress-bar-nav {
         display: none;
     }
 }
 
 @media (max-width: 991px) {
     .progress-bar-nav {
-        top: 57px; /* Ajusta este valor según la altura del navbar */
+        top: 55px; /* Ajusta este valor según la altura del navbar */
     }
     .navbar-nav a {
         margin-left: 10px;
@@ -574,7 +575,7 @@ a:focus {
 .hero-image img {
     transition: 0.5s ease;
     box-shadow: var(--box-shadow-color-fort);
-    background-color:var(--background);
+    background-color:var(--background-cards);
     width: 320px;
     height: 320px;
     border-radius: 50%; 
@@ -874,7 +875,6 @@ a:focus {
 }
 
 .experience .timeline .timeline-item {
-    transition: 0.5s ease;
     position: relative;
     background: inherit;
     width: 50%;
@@ -882,13 +882,11 @@ a:focus {
 }
 
 .experience .timeline .timeline-item.left {
-    transition: 0.5s ease;
     left: 0;
     padding-right: 30px;
 }
 
 .experience .timeline .timeline-item.right {
-    transition: 0.5s ease;
     left: 50%;
     padding-left: 30px;
 }
@@ -919,12 +917,12 @@ a:focus {
   right: 10px;
   z-index: 1;
   border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+  border-color: transparent transparent transparent var(--primary-color);
 }
 
 .experience .timeline .timeline-item.right::before {
   left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+  border-color: transparent var(--primary-color) transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -1023,7 +1021,7 @@ a:focus {
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
-        border-right: 5px solid #dddddd;
+        border-right: 5px solid var(--primary-color);
         border-left: 5px solid var(--primary-color);
     }
 }

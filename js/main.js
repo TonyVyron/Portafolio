@@ -36,26 +36,38 @@
         }
     });
 
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo');
-            
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
-            }
-            
-            // Cerrar el menú colapsado en móvil después de hacer clic
-            if ($(window).width() < 992) {
-                $('.navbar-collapse').collapse('hide');
-            }
+// Smooth scrolling on the navbar links
+$(".navbar-nav a").on('click', function (event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - 45
+        }, 1500, 'easeInOutExpo');
+
+        if ($(this).parents('.navbar-nav').length) {
+            $('.navbar-nav .active').removeClass('active');
+            $(this).closest('a').addClass('active');
         }
-    });
+
+        if ($(window).width() < 992) {
+            $('.navbar-collapse').collapse('hide');
+            $('.progress-bar-nav').show(); // Vuelve a mostrar la barra de progreso
+        }
+    }
+});
+
+// Escucha cuando se colapsa el navbar
+$('.navbar-toggler').on('click', function () {
+    if ($(window).width() < 992) {
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.progress-bar-nav').show(); // Mostrar barra de progreso
+        } else {
+            $('.progress-bar-nav').hide(); // Ocultar barra de progreso cuando el menú se expande
+        }
+    }
+});
+
 
     // Typed.js Initiate
     if ($('.hero .hero-text h2').length == 1) {

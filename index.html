@@ -19,6 +19,10 @@
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+        
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -29,7 +33,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a href="#home" class="navbar-brand">AF</a> 
+                <a class="navbar-brand">AF</a> 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,14 +70,14 @@
                     </div>
                     <div class="col-md-6">
                         <div class="hero-content">
-                            <div class="hero-text wow zoomIn" >
+                            <div class="hero-text wow zoomIn" data-wow-delay="0s">
                                 <h3>Hola, Soy Yo</h3>
                                 <h1>Antonio Fuentes <br> Jara  <i class="fa fa-code"></i></h1>
                                 <h3>Desarrollador <span class="typed-text">Web, Front End, Back End, Móvil, Móvil Multiplataforma</span> </h3>
                                 <h2></h2>
                                 <p>Con experiencia en Ruby on Rails, JavaScript, TypeScript, Kotlin, Dart, SQL, y Firebase</p>
                             </div>
-                            <div class="hero-btn wow zoomIn">
+                            <div class="hero-btn wow zoomIn" data-wow-delay="0s">
                                 <div class="hero-buttons">
                                     <a class="button github-button" target="_blank" href="https://www.linkedin.com/in/antonio-fuentes-jara/">
                                         <i class="fab fa-linkedin-in"></i>
@@ -102,21 +106,21 @@
 
 
         <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+        <div class="about" id="about">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-md-5">
+                    <div class="col-md-5 wow zoomIn"  >
                         <div class="about-img">
                             <img src="img/about.svg" alt="Image">
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="about-content">
-                            <div class="section-header text-left wow fadeInDown">
+                            <div class="section-header text-left ">
                                 <p>2 Años de Experiencia</p>
                                 <h2>Sobre mí</h2>
                             </div>
-                            <div class="about-text wow fadeInDown">
+                            <div class="about-text wow wow fadeIn">
                                 <p>
                                     Soy ingeniero en Desarrollo y Gestión de Software con experiencia en aplicaciones web, nativas y multiplataforma. Comencé mi formación con un TSU en Desarrollo de Software Multiplataforma, logrando una sólida base en programación y desarrollo de sistemas.
                                 </p>
@@ -154,18 +158,18 @@
                    <!-- Service Start -->
                    <div class="service" id="service">
                     <div class="container-fluid">
-                        <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <header class="section-header text-center">
                             <p>Lo que hago</p>
                             <h2>Mis Habilidades</h2>
                         </header>
                         <div class="row">
-                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.0s">
+                            <div class="col-lg-4">
                                 <h3>Front-end</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-code"></i>
                                     </div>
-                                    <div class="service-text">
+                                    <div class="service-text wow zoomIn">
                                         <ul class="skills-list">
                                             <li><img src="img/languages/html-5.png" alt="HTML5"></li>
                                             <li><img src="img/languages/css-3.png" alt="CSS3"></li>
@@ -181,13 +185,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="col-lg-4">
                                 <h3>Back-end</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-database"></i>
                                     </div>
-                                    <div class="service-text">
+                                    <div class="service-text wow zoomIn">
                                         <ul class="skills-list">
                                             <li><img src="img/languages/ruby.png" alt="Ruby on Rails"></li>
                                             <li><img src="img/languages/nodejs.png" alt="Node.js"></li>
@@ -200,13 +204,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="col-lg-4">
                                 <h3>Herramientas</h3>
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-tools"></i>
                                     </div>
-                                    <div class="service-text">
+                                    <div class="service-text wow zoomIn">
                                         <ul class="skills-list">
                                             <li><img src="img/languages/figma.png" alt="Ruby on Rails"></li>
                                             <li><img src="img/languages/cucumber.png" alt="Cucumber"></li>
@@ -231,12 +235,12 @@
           <!-- Experience Start -->
           <div class="experience" id="experience">
             <div class="container-fluid">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <header class="section-header text-center" >
                     <p>Mi Currículum</p>
                     <h2>Experiencia Laboral</h2>
                 </header>
                 <div class="timeline">
-                    <div class="timeline-item left wow zoomIn>" data-wow-delay="0.1s">
+                    <div class="timeline-item left " >
                         <div class="timeline-text">
                             <div class="timeline-date">abr. 2024 - actualidad · 5 meses</div>
                             <h3>Desarrollador de Web Jr</h3>
@@ -250,7 +254,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-item right wow zoomIn" data-wow-delay="0.1s">
+                    <div class="timeline-item right" >
                         <div class="timeline-text">
                             <div class="timeline-date">oct. 2023 - may. 2024 · 8 meses</div>
                             <h3>Practicante IT</h3>
@@ -263,7 +267,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-item left wow zoomIn" data-wow-delay="0.1s">
+                    <div class="timeline-item left" >
                         <div class="timeline-text">
                             <div class="timeline-date">abr. 2022 - sept. 2022 · 6 meses</div>
                             <h3>Desarrollador de Software</h3>
@@ -276,7 +280,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-item right wow zoomIn" data-wow-delay="0.1s">
+                    <div class="timeline-item right">
                         <div class="timeline-text">
                             <div class="timeline-date">mar. 2022 - oct. 2022 · 8 meses</div>
                             <h3>Desarrollador móvil multiplataforma</h3>
@@ -295,7 +299,7 @@
      <!-- Portfolio Start -->
      <div class="portfolio" id="portfolio">
         <div class="container-fluid">
-            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <div class="section-header text-center" >
                 <p>Portafolio</p>
                 <h2>Mis Proyectos</h2>
             </div>
@@ -312,7 +316,7 @@
             </div>
             <div class="row portfolio-container">
                 <!-- Project 1 -->
-                <div class="col-lg-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-3" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -346,7 +350,7 @@
                 </div>
     
                 <!-- Project 2 -->
-                <div class="col-lg-6  portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6  portfolio-item filter-2" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -379,7 +383,7 @@
                 </div>
     
                 <!-- Project 3 -->
-                <div class="col-lg-6 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-1" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -417,7 +421,7 @@
                 </div>
     
                 <!-- Project 4 -->
-                <div class="col-lg-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-3" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -451,7 +455,7 @@
                 </div>
     
                 <!-- Project 5 -->
-                <div class="col-lg-6 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-1" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -485,7 +489,7 @@
                 </div>
     
                 <!-- Project 6 -->
-                <div class="col-lg-6 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-4" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -518,7 +522,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="col-lg-6 portfolio-item filter-4" >
                     <div class="portafolio-wrap">
                         <div class="portafolio-text">
                             <div class="project-uper">
@@ -565,7 +569,7 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="contact-form wow zoomIn">
+                        <div class="contact-form">
                             <div id="success"></div>
                             <div class="section-header text-left">
                                 <p>Enviame Correo</p>
@@ -602,7 +606,7 @@
         <!-- Contact End -->
 
         <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="footer">
             <div class="container-fluid">
                 <div class="footer-info">
                     <h2>Antonio Fuentes Jara</h2>
